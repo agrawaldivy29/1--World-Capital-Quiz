@@ -22,8 +22,10 @@ let quiz = [
 
 db.query("SELECT * FROM capitals", (err, res) => {
   if (err) {
+    console.log(err);
     console.error("Error executing query", err.stack);
   } else {
+    // console.log(res);
     quiz = res.rows;
   }
   db.end();
